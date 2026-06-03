@@ -1,0 +1,1575 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: "Poppins", serif;
+}
+
+:root {
+    --bg-color: #0c1022;
+    --second-bg-color: #323946;
+    --main-color: #7cf03d;
+    --main-color-1: rgb(255, 0, 204);
+    --main-color-2: yellow;
+    --main-color-3: linear-gradient(45deg, rgb(0, 255, 0), rgb(255, 255, 0));
+    --main-color-4: rgb(0, 255, 255);
+    --white-color: #fff;
+    --disabled-color: #fff3;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    color: var(--white-color);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 3rem;
+    color: var(--white-color);
+    font-weight: 700;
+}
+
+nav a {
+    font-size: 2rem;
+    color: var(--white-color);
+    font-weight: 500;
+    margin-left: 3.5rem;
+    transition: .5s;
+}
+
+nav a:hover,
+nav a.active {
+    background: var(--main-color-3);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+#menu-icon {
+    font-size: 4rem;
+    display: none;
+}
+
+section {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 10rem 9% 2rem;
+    background: var(--bg-color);
+    visibility: hidden;
+    opacity: 0;
+    overflow: hidden;
+}
+
+section.active {
+    visibility: visible;
+    opacity: 1;
+    overflow: auto;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+
+.home-detail {
+    opacity: 0;
+    animation: slideBottom 1s ease forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes slideBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px)
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.home-detail h1 {
+    font-size: clamp(3.5rem, 10vw, 5.5rem);
+}
+
+.home-detail h2 {
+    display: inline-block;
+    font-size: 3.2rem;
+    margin-top: -1rem;
+}
+
+.home-detail h2 span {
+    position: relative;
+    display: inline-block;
+    color: transparent;
+    -webkit-text-stroke: .07rem var(--main-color);
+    animation: display-text 20s linear infinite;
+    animation-delay: calc(-4s * var(--i));
+}
+
+@keyframes display-text {
+    20%, 100% {
+        display: none;
+    }
+}
+
+.home-detail h2 span::before {
+    content: attr(data-text);
+    position: absolute;
+    width: 0;
+    border-right: .2rem solid var(--main-color);
+    color: var(--main-color);
+    white-space: nowrap;
+    overflow: hidden;
+    animation: fill-text 4s linear infinite;
+}
+
+@keyframes fill-text {
+    10%,
+    100% {
+        width: 0;
+    }
+
+    70%,
+    90% {
+        width: 100%;
+    }
+}
+
+.home-detail p {
+    font-size: 1.6rem;
+    margin: 1rem 0 2.5rem;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: .9s;
+}
+
+@keyframes slideLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+.home-detail .btn-sci {
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 0.7s;
+}
+
+@keyframes slideTop {
+    0% {
+        opacity: 0;
+        transform: translateY(100px)
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 3rem;
+    background: var(--main-color);
+    border: .2rem solid var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.6rem;
+    color: var(--bg-color);
+    font-weight: 500;
+    transition: .5s;
+}
+
+.btn:hover {
+    background: transparent;
+    color: var(--main-color);
+    box-shadow: none;
+}
+
+.home-detail .btn-sci .sci {
+    margin-left: 2rem;
+}
+
+.home-detail .btn-sci .sci a {
+    display: inline-flex;
+    padding: 0.8rem;
+    border: .2rem solid var(--main-color);
+    border-radius: 50%;
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 0 .8rem;
+    transition: .5;
+}
+
+.home-detail .btn-sci .sci a:hover{
+    background: var(--main-color);
+    color: var(--main-color-1);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.sci a {
+    position: relative;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.sci a:hover {
+    transform: scale(1.1);
+}
+
+.tooltip {
+    position: absolute;
+    top: -4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: .3rem 1rem;
+    background: var(--main-color);
+    border-radius: .4rem;
+    font-size: 1.6rem;
+    color: var(--bg-color);
+    font-weight: 500;
+    white-space: nowrap;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+}
+
+a:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.home-img .img-box {
+    position: relative;
+    width: 32vw;
+    height: 32vw;
+    border-radius: 50%;
+    padding: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    opacity: 0;
+    animation: zoomIn 2s ease forwards;
+    animation-delay: 0.7s;
+}
+
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.home-img .img-box .img-item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color);
+    border-radius: 50%;
+    border: .01rem solid var(--bg-color);
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.home-img .img-box::before,
+.home-img .img-box::after {
+    content: "";
+    position: absolute;
+    width: 50rem;
+    height: 50rem;
+    background: conic-gradient(transparent, transparent, transparent, var(--main-color));
+    transform: rotate(0deg);
+    animation: rotate-border 10s linear infinite;
+}
+
+.home-img .img-box::after {
+    animation-delay: -5s;
+}
+
+@keyframes rotate-border {
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+.home-img .img-box .img-item img {
+    position: absolute;
+    top: -3rem;
+    display: block;
+    width: 85%;
+    object-fit: cover;
+    mix-blend-mode: lighten;
+}
+
+/* SERVICES SECTION*/
+/* IMAGE */
+.services-img {
+    width: 410px;
+    height: 410px;
+    margin-top: 40px;
+    opacity: 0;
+    animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
+    animation-delay: 2.1s, 3.1s;
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-24px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.services-img .glowing-circle{
+    position: relative;
+    width: 96%;
+    height: 96%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.services-img .glowing-circle::after {
+    content: "";
+    position: absolute;
+    width: 380px;
+    height: 380px;
+    background: #0c1022;
+    border-radius: 50%;
+}
+
+.glowing-circle span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#f06, rgb(4, 189, 245));
+    border-radius: 50%;
+    animation: circleRotate 5s linear infinite;
+}
+
+@keyframes circleRotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.glowing-circle span:nth-child(1) {
+    filter: blur(10px);
+}
+
+.glowing-circle .image {
+    position: relative;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.image img {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translate(-50%);
+    max-width: 350px;
+    object-fit: cover;
+}
+
+.services {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    gap: 170px;
+}
+
+.services-content {
+    margin-top: -160px;
+}
+
+.services-content h1 {
+    font-size: 56px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+}
+
+.services-content p {
+    font-size: 18px;
+    margin: 20px 0 40px;
+    line-height: 1.2;
+    display: flex;
+    justify-content: center;
+}
+
+/* BUTTON */
+.btn-services {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    height: 48px;
+    border-radius: 40px;
+    font-size: 35px;
+    color: yellow;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.btn-services::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    inset: 0;
+    background: linear-gradient(45deg, #f06, #3cf, #f06);
+    z-index: -1;
+    border-radius: 40px;
+    background-size: 200%;
+    background-position: 0 0;
+    border-radius: 40px;
+    filter: blur(5px);
+}
+
+.btn-services:hover::before {
+    background-position: 100% 0;
+}
+
+.btn-services::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    inset: 0;
+    background: linear-gradient(45deg, #f06, #3cf, #f06);
+    background-position: 0 0;
+    background-size: 200%;
+    z-index: -1;
+    border-radius: 40px;
+    transition: .5s ease;
+}
+
+.btn-services:hover::after {
+    background-position: 100% 0;
+}
+
+#user-input {
+    width: 100%; /* Để ô input chiếm toàn bộ chiều rộng của container */
+    padding: 12px 15px; /* Khoảng cách bên trong để chữ không bị sát mép */
+    font-size: 16px; /* Cỡ chữ phù hợp */
+    border: 2px solid #0bc2eb; /* Viền nhạt để tạo khung */
+    border-radius: 8px; /* Bo tròn các góc */
+    outline: none; /* Bỏ hiệu ứng viền mặc định khi focus */
+    box-shadow: none; /* Bỏ hiệu ứng bóng mặc định */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Thêm hiệu ứng mượt mà */
+    background-color: #0c1022;
+    color: wheat;
+}
+
+#user-input:focus {
+    border-color: yellow; /* Thay đổi màu viền khi người dùng focus */
+    box-shadow: 0 0 8px rgba(240, 6, 6, 0.5); /* Hiệu ứng ánh sáng xung quanh */
+}
+
+#chat-form {
+    display: flex; /* Sắp xếp input và button theo hàng ngang */
+    gap: 10px; /* Khoảng cách giữa input và nút */
+    margin-top: 20px; /* Khoảng cách phía trên của form */
+    margin-bottom: 20px;
+}
+
+.bot-response {
+    margin: 10px auto;
+    padding: 3px;
+    background: var(--bg-color); /* Màu nền của khung */
+    /*border-radius: 10px; */ /* Bo góc khung */
+    /* border: 2px solid #0078d7;*/ /*Viền khung */
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); *//* Đổ bóng nhẹ */
+    font-size: 16px;
+    color: wheat;
+    max-height: 250px; /* Giới hạn chiều cao */
+    overflow-y: auto; /* Thêm thanh cuộn dọc khi nội dung vượt quá chiều cao */
+    overflow-x: hidden; /* Ẩn thanh cuộn ngang nếu không cần thiết */
+    word-wrap: break-word; /* Ngắt dòng nếu từ quá dài */ 
+    width: 610px;
+    position: fixed; 
+}
+
+/* ============== RESUME SECTION ================= */
+/* EXPERIENCE */
+.heading {
+    font-size: 4.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.heading span {
+    color: var(--main-color-2)
+}
+
+.resume-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 5rem;
+}
+
+.resume-box h2 {
+    font-size: 3.3rem;
+}
+
+.resume-box p {
+    font-size: 1.6rem;
+}
+
+.resume-box .desc {
+    margin: 2rem 0 2.5rem;
+}
+
+.resume-box .resume-btn {
+    width: 100%;
+    height: 5rem;
+    background: var(--second-bg-color);
+    border: .2rem solid var(--second-bg-color);
+    font-size: 1.6rem;
+    color: var(--white-color);
+    font-weight: 500;
+    margin-bottom: 1rem;
+    border-radius: .8rem;
+    cursor: pointer;
+}
+
+.resume-box .resume-btn.active{
+    border-color: var(--main-color-2);
+    color: var(--main-color-2);
+}
+
+.resume-detail {
+    display: none;
+}
+
+.resume-detail.active {
+    display: block;
+}
+
+.resume-box .heading {
+    font-size: 3.0rem;
+    text-align: left;
+}
+
+.resume-list {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr)); */
+    grid-template-columns: repeat(auto-fit, minmax(1fr, 30rem));
+    gap: 2rem;
+    height: 38rem;
+    overflow: auto;
+}
+
+.resume-list::-webkit-scrollbar{
+    width: .7rem;
+}
+
+.resume-list::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 1rem;
+}
+
+.resume-list:hover::-webkit-scrollbar-thumb {
+    background: var(--main-color-3);
+}
+
+.resume-list .resume-item {
+    background: var(--second-bg-color);
+    border-radius: .8rem;
+    padding: 2rem 2.5rem;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.resume-item .year {
+    color: var(--main-color-2)
+}
+
+.resume-item h3 {
+    font-size: 2.2rem;
+}
+
+.resume-item .company {
+    position: relative;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+}
+
+.resume-item .company::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: .5rem;
+    background: var(--main-color-2);
+    border-radius: 50%;
+    margin-left: -2rem;
+}
+
+.position {
+    display: flex;
+    align-items: center;
+}
+.position i {
+    margin-right: 2px;
+    margin-left: -2px;
+    color: yellow;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* SKILLS */
+.resume-detail.skills .resume-list {
+    /* grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); */
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.resume-detail.skills .resume-item {
+    position: relative;
+    align-items: center;
+    height: auto;
+    padding: 3rem;
+    margin: 0.2rem 0;
+}
+
+.resume-detail.skills .resume-item i {
+    font-size: 8.5rem;
+    transition: .5s;
+}
+
+.resume-detail.skills .resume-item:hover i {
+    color: var(--main-color-2)
+}
+
+.resume-detail.skills .resume-item span {
+    position: absolute;
+    top: -20%;
+    background: var(--white-color);
+    color: var(--bg-color);
+    font-size: 1.6rem;
+    padding: .5rem 1rem;
+    border-radius: .6rem;
+    pointer-events: none;
+    opacity: 0;
+    transform: scale(.9);
+    transition: .2s;
+}
+
+.resume-detail.skills .resume-item:hover span {
+    top: 0%;
+    opacity: 1;
+    transform: scale(1);
+    color:rgb(255, 0, 0);
+    font-weight: 200;
+}
+
+/* ABOUT ME */
+.resume-detail.about .resume-list {
+    height: auto;
+    padding: 16rem 0 0;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+}
+
+.resume-detail.about .resume-item {
+    height: auto;
+    padding: 0 0 .5rem;
+    background: transparent;
+}
+
+.resume-detail.about .resume-item p {
+    color: var(--main-color-2);
+}
+
+.resume-detail.about .resume-item p span {
+    color: var(--white-color);
+    margin-left: 1rem;
+    font-size: 1.4rem;
+}
+
+/* ========== PORTFOLIO SECTION ========= */
+/* TEXT */
+.heading-project {
+    font-size: 4.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.heading-project span {
+    color: var(--main-color-4)
+}
+
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+
+.portfolio-detail {
+    display: none;
+}
+
+.portfolio-detail.active {
+    display: block;
+}
+
+.portfolio-box .numb {
+    font-size: 8rem;
+    -webkit-text-stroke: .07rem var(--white-color);
+    color: transparent;
+    line-height: 1;
+}
+
+.portfolio-box h3 {
+    font-size: 3.5rem;
+    margin: .8rem 0 2rem;
+}
+
+.portfolio-box p {
+    font-size: 1.6rem;
+}
+
+.portfolio-box .tech {
+    margin: 2rem 0;
+    color: var(--main-color-4);
+    border-bottom: .1rem solid var(--white-color);
+    padding-bottom: 2rem;
+}
+
+.portfolio-box .live-github {
+    position: relative;
+    display: inline-flex;
+    padding: 1.3rem;
+    font-size: 3rem;
+    color: var(--white-color);
+    border-radius: 50%;
+    background: var(--second-bg-color);
+    transition: .5s;
+}
+
+.portfolio-box .live-github:hover {
+    color: var(--main-color-4);
+}
+
+.portfolio-box .live-github {
+    margin-right: 1.5rem;
+}
+
+.portfolio-box .live-github i {
+    transform: rotate(135deg);
+}
+
+.portfolio-box .live-github span {
+    position: absolute;
+    top: -60%;
+    left: 50%;
+    transform: translate(-50%) scale(.9);
+    font-size: 1.6rem;
+    white-space: nowrap;
+    padding: .5rem 1rem;
+    border-radius: .6rem;
+    pointer-events: none;
+    background: var(--white-color);
+    color: var(--bg-color);
+    opacity: 0;
+    /* scale: .9; */
+    /* transition: .2s; */
+    transition: all 0.3s ease;
+}
+
+.portfolio-box .live-github:hover span {
+    top:-70%;
+    opacity: 1;
+    /* scale: 1; */
+    transform: translate(-50%) scale(1);
+}
+
+/* IMAGES */
+.portfolio-box .portfolio-carousel {
+    width: 100%;
+    height: 45rem;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.portfolio-carousel .img-slide {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+    gap: 2rem;
+    height: inherit;
+    transition: .5s;
+}
+
+.portfolio-carousel .img-item {
+    height: inherit;
+}
+
+.portfolio-carousel .img-item img {
+    display: block;
+    margin-top: -20px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+/* BUTTON */
+.portfolio-box .navigation {
+    text-align: right;
+    margin-top: -1.1rem; /* nâng nút lên trên hơn một chút */
+    position: relative;
+    z-index: 2;
+}
+
+.portfolio-box .navigation button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: .35rem .7rem; /* thu nhỏ padding ngang */
+    background: var(--second-bg-color);
+    border: .15rem solid var(--main-color);
+    border-radius: .6rem;
+    font-size: 2.6rem; /* giảm size icon/text */
+    line-height: 1;
+    height: 4.0rem;
+    min-width: 3.6rem;
+    color: var(--main-color);
+    cursor: pointer;
+}
+
+.portfolio-box .navigation .arrow-right {
+    margin-left: .8rem;
+}
+
+.portfolio-box .navigation button.disabled {
+    border-color: var(--second-bg-color);
+    color: var(--disabled-color);
+}
+
+/* ============= CONTACT SECTION ============ */
+.heading-contact {
+    font-size: 4.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.heading-contact span {
+    color: var(--main-color-1)
+}
+.contact-container {
+    display:grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 3rem;
+}
+
+.contact-container .contact-box:first-child {
+    align-self: center;
+}
+
+.contact-box h2 {
+    font-size: 4.5rem;
+}
+
+.contact-box p {
+    font-size: 1.6rem;
+}
+
+.contact-box .desc {
+    margin: 1.5rem 0 2.5rem;
+}
+
+.contact-box .contact-detail {
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.contact-detail i {
+    display: inline-flex;
+    background: var(--second-bg-color);
+    color: var(--main-color-1);
+    font-size: 3rem;
+    padding: 1.2rem;
+    border-radius: .6rem;
+    margin-right: 1.5rem;
+}
+
+.contact-detail .detail p:first-child {
+    color: var(--main-color-1);
+}
+/*  */
+.contact-box form {
+    background: var(--second-bg-color);
+    padding: 0rem 3.5rem 0rem; /* change padding: 1rem 3.5rem 3rem; */
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.contact-box .heading {
+    font-size: 3.5rem;
+}
+
+.contact-box .field-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.contact-box .field-box input,
+.contact-box .field-box textarea {
+    padding: 1.5rem;
+    background: var(--bg-color);
+    border: .15rem solid var(--bg-color);
+    border-radius: .6rem;
+    font-size: 1.6rem;
+    color: var(--white-color);
+}
+
+.contact-box .field-box textarea {
+    grid-column: 1 / -1;
+    height: 26rem;
+    resize: none;
+}
+
+.contact-box .field-box input:focus,
+.contact-box .field-box textarea:focus {
+    border-color: var(--main-color-1)
+}
+
+.contact-box .btn {
+    display: inline-block;
+    padding: 1rem 3rem;
+    background: var(--main-color-1);
+    border: .2rem solid var(--main-color-1);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color-1);
+    font-size: 1.6rem;
+    color: yellow;
+    font-weight: 500;
+    transition: .5s;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: transparent;
+    color: var(--main-color-1);
+    box-shadow: none;
+}
+
+/* =============== Language switcher =================*/
+.language-switcher img {
+    width: 60px; /* Tăng kích thước chiều rộng */
+    height: auto; /* Tự động điều chỉnh chiều cao để giữ tỉ lệ */
+    cursor: pointer; /* Con trỏ chuột sẽ chuyển thành dạng chỉ tay khi di chuột qua */
+    transition: 0.3s ease; /* Hiệu ứng mượt khi thay đổi trạng thái */
+    background-color: #1f242d;
+}
+
+.language-switcher img:not(.active) {
+    opacity: 0.6; /* Mờ lá cờ chưa được chọn */
+}
+
+.language-switcher img.active {
+    opacity: 1; /* Sáng màu cờ được chọn */
+}
+
+.language-switcher img:hover {
+    transform: scale(1.05); /* Phóng to nhẹ khi hover */
+}
+
+.lang-btn {
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* BREAKPOINTS */
+@media screen and (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+    .resume-box .resume-list {
+        gap: 7px;
+        height: 38rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .services {
+        gap: 52px;
+    }
+}
+
+@media screen and (max-width: 914px) {
+    #menu-icon {
+        display: block;
+    }
+
+    nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 0;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        text-align: center;
+        display: none;
+    }
+
+    nav.active {
+        display: block;
+    }
+
+    nav a {
+        display: block;
+        margin: 4rem 0;
+    }
+
+    .glowing-circle .image {
+        width: 250px;
+        height: 250px;
+    }
+
+    .image img {
+        max-width: 225px;
+    }
+
+    .services-img .glowing-circle::after {
+        width: 250px;
+        height: 250px;
+    }
+
+    .glowing-circle span {
+        width: 68%;
+        height: 64%;
+    }
+
+    .services {
+        font-size: 90%;
+        padding: 0% 5% 0% 1%;
+    }
+
+    .btn-services {
+        font-size: 30px;
+        width: 194px;
+    }
+
+    .resume-detail.skills .resume-item {
+        padding: 1.1rem 1.1rem;
+    }
+
+    .resume-box .resume-list {
+        height: 47.9rem;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .contact-box h2 {
+        font-size: 3.9rem;
+    }
+
+    .contact-box p {
+        font-size: 1.4rem;
+    }
+
+    .contact-detail i {
+        font-size: 2.6rem; 
+    }
+
+    .contact-box .field-box input, .contact-box .field-box textarea {
+        font-size: 1.4rem;
+    }
+
+    .contact-box .btn {
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 798px) {
+    .home-detail h1 {
+        font-size: clamp(2.45rem, 10vw, 3.85rem);
+    }
+
+    .home-detail h2 {
+        font-size: 2.24rem;
+    }
+
+    .home-detail p {
+        font-size: 1.12rem;
+    }
+
+    .btn-sci .btn {
+        font-size: 1.12rem;
+    }
+
+    .home-detail .btn-sci .sci a {
+        font-size: 1.4rem;
+    }
+
+    .services-content h1 {
+        font-size: 39.2px;
+    }
+
+    .services-content p {
+        font-size: 12.6px;
+    }
+
+    #user-input {
+        font-size: 11.2px;
+    }
+
+    .btn-services {
+        font-size: 21px;
+    }
+
+    .bot-response {
+        font-size: 11.2px;
+    }
+
+    .resume-box h2 {
+        font-size: 3.15rem
+    }
+
+    .resume-box p {
+        font-size: 1.12rem;
+    }
+
+    .resume-box .heading {
+        font-size: 3.15rem
+    }
+
+    .position i {
+        font-size: 14px;
+    }
+
+    .resume-detail.skills .resume-list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .resume-detail.skills .resume-item {
+        padding: 1.1rem 1.1rem;
+    }
+
+    .resume-detail.skills .resume-item i {
+        font-size: 5.95rem;
+    }
+
+    .resume-detail.about .resume-list {
+        grid-template-columns: repeat(auto-fit, minmax(15.4rem, 1fr));
+    }
+
+    .resume-detail.skills .resume-item span {
+        font-size: 1.12rem;
+    }
+
+    .resume-detail.about .resume-item p span {
+        font-size: 1.26rem;
+    }
+
+    h2.heading-project {
+        font-size: 27.72px;
+    }
+
+    .portfolio-container .numb {
+        font-size: 49.28px
+    }
+
+    .portfolio-box h3 {
+        font-size: 2.45rem;
+    }
+
+    .portfolio-box p {
+        font-size: 1.12rem;
+    }
+
+    .portfolio-box .live-github {
+        font-size: 2.1rem;
+    }
+
+    .contact-box h2 {
+        font-size: 3.15rem;
+    }
+
+    .contact-box p {
+        font-size: 1.12rem;
+    }
+
+    .contact-detail i {
+        font-size: 2.1rem; 
+    }
+
+    .contact-box .field-box input, .contact-box .field-box textarea {
+        font-size: 1.12rem;
+    }
+
+    .contact-box .btn {
+        font-size: 1.12rem;
+    }
+}
+
+@media screen and (max-width: 616px) {
+    .home-detail h1 {
+        font-size: clamp(1.9rem, 7.7vw, 3rem);
+    }
+
+    .home-detail h2 {
+        font-size: 1.73rem;
+    }
+
+    .home-detail p {
+        font-size: 0.86rem;
+    }
+
+    .btn-sci .btn {
+        font-size: 0.86rem;
+    }
+
+    .home-detail .btn-sci .sci a {
+        font-size: 1.1rem;
+    }
+
+    .glowing-circle .image {
+        width: 145px;
+        height: 145px;
+    }
+
+    .image img {
+        max-width: 130px;
+    }
+
+    .services-img .glowing-circle::after {
+        width: 188px;
+        height: 188px;
+    }
+
+    .glowing-circle span {
+        width: 51%;
+        height: 48%;
+    }
+
+    .services-content h1 {
+        font-size: 29.5px;
+    }
+
+    .services-content p {
+        font-size: 9.5px;
+    }
+
+    #user-input {
+        font-size: 8.4px;
+    }
+
+    .btn-services {
+        font-size: 15.8px;
+    }
+
+    .bot-response {
+        font-size: 0.84px;
+    }
+
+    .resume-container {
+        gap: 3.75rem;
+    }
+
+    .resume-box h2 {
+        font-size: 2.4rem
+    }
+
+    .resume-box p {
+        font-size: 0.84rem;
+    }
+
+    .resume-box .heading {
+        font-size: 2.4rem
+    }
+
+    .position i {
+        font-size: 10.5px;
+    }
+
+    .resume-detail.skills .resume-list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .resume-detail.skills .resume-item {
+        padding: 0.83rem 0.83rem;
+    }
+
+    .resume-detail.skills .resume-item i {
+        font-size: 4.5rem;
+    }
+
+    .resume-detail.about .resume-list {
+        grid-template-columns: repeat(auto-fit, minmax(11.6rem, 1fr));
+    }
+
+    .resume-detail.skills .resume-item span {
+        font-size: 0.84rem;
+    }
+
+    .resume-detail.about .resume-item p span {
+        font-size: 0.95rem;
+    }
+
+    h2.heading-project {
+        font-size: 27.72px;
+    }
+
+    .portfolio-container .numb {
+        font-size: 49.28px
+    }
+
+    .portfolio-box h3 {
+        font-size: 2.45rem;
+    }
+
+    .portfolio-box p {
+        font-size: 1.12rem;
+    }
+
+    .portfolio-box .live-github {
+        font-size: 2.1rem;
+    }
+
+    .contact-box h2 {
+        font-size: 2.4rem;
+    }
+
+    .contact-box p {
+        font-size: 0.84rem;
+    }
+
+    .contact-detail i {
+        font-size: 1.6rem; 
+    }
+
+    .contact-box .field-box input, .contact-box .field-box textarea {
+        font-size: 0.84rem;
+    }
+
+    .contact-box .btn {
+        font-size: 0.84rem;
+    }
+
+    .contact-box form {
+        padding: 0rem 2.6rem 3rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .home-detail h1 {
+        font-size: clamp(1.53rem, 6.26vw, 2.41rem);
+    }
+
+    .home-detail h2 {
+        font-size: 1.4rem;
+    }
+
+    .home-detail p {
+        font-size: 0.7rem;
+    }
+
+    .btn-sci .btn {
+        font-size: 0.7rem;
+    }
+
+    .home-detail .btn-sci .sci a {
+        font-size: 0.9rem;
+    }
+
+    .services {
+        gap: 25px;
+    }
+
+    .glowing-circle .image {
+        width: 188px;
+        height: 188px;
+    }
+
+    .image img {
+        max-width: 169px;
+    }
+
+    .services-img .glowing-circle::after {
+        width: 188px;
+        height: 188px;
+    }
+
+    .glowing-circle span {
+        width: 51%;
+        height: 48%;
+    }
+
+    .services-content h1 {
+        font-size: 29.5px;
+    }
+
+    .services-content p {
+        font-size: 9.5px;
+    }
+
+    #user-input {
+        font-size: 8.4px;
+    }
+
+    .btn-services {
+        font-size: 15.8px;
+    }
+
+    .resume-container {
+        gap: 3.75rem;
+    }
+
+    .resume-box h2 {
+        font-size: 2.4rem
+    }
+
+    .resume-box p {
+        font-size: 0.84rem;
+    }
+
+    .resume-box .heading {
+        font-size: 2.4rem
+    }
+
+    .position i {
+        font-size: 10.5px;
+    }
+
+    .resume-detail.skills .resume-list {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .resume-detail.skills .resume-item {
+        padding: 0.83rem 0.83rem;
+    }
+
+    .resume-detail.skills .resume-item i {
+        font-size: 4.5rem;
+    }
+
+    .resume-detail.about .resume-list {
+        grid-template-columns: repeat(auto-fit, minmax(11.6rem, 1fr));
+    }
+
+    .resume-detail.skills .resume-item span {
+        font-size: 0.84rem;
+    }
+
+    .resume-detail.about .resume-item p span {
+        font-size: 0.75rem;
+    }
+
+    h2.heading-project {
+        font-size: 27.72px;
+    }
+
+    .portfolio-container .numb {
+        font-size: 49.28px
+    }
+
+    .portfolio-box h3 {
+        font-size: 2.45rem;
+    }
+
+    .portfolio-box p {
+        font-size: 1.12rem;
+    }
+
+    .portfolio-box .live-github {
+        font-size: 2.1rem;
+    }
+
+    .contact-box h2 {
+        font-size: 2.4rem;
+    }
+
+    .contact-box p {
+        font-size: 0.84rem;
+    }
+
+    .contact-detail i {
+        font-size: 1.6rem; 
+    }
+
+    .contact-box .field-box input, .contact-box .field-box textarea {
+        font-size: 0.84rem;
+    }
+
+    .contact-box .btn {
+        font-size: 0.84rem;
+    }
+
+    .contact-box form {
+        padding: 0rem 2.6rem 3rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+}
+

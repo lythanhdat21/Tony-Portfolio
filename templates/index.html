@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equip="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tony's Portfolio</title>
+
+    <!-- Boxicons -->
+     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+    <!-- Customs css -->
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <a href="#" class="logo">TONY LEE</a>
+        <i class="bx bx-menu" id="menu-icon"></i>
+        <nav>
+            <a href="#" class="hom active">Home</a>
+            <a href="#" class="ser">Services</a>
+            <a href="#" class="res">Resume</a>
+            <a href="#" class="por">Portfolio</a>
+            <a href="#" class="con">Contact</a>
+        </nav>
+
+        <!-- Language switcher -->
+        <div class="language-switcher">
+            <img id="lang-en" class="lang-btn" src="../Images/USA.png" alt="English" />
+            <img id="lang-ja" class="lang-btn" src="../Images/Japan.png" alt="Japanese" />
+        </div>
+    </header>
+
+    <!-- Home section -->
+    <section class="home active">
+        <div class="home-detail">
+            <h1>Tony Lee</h1>
+            <h2>I'm a <!--Demand Planner-->
+                <span style="--i:5;" data-text="AI - Workplace Automation" class="Automation">AI - Workplace Automation</span>
+                <span style="--i:4;" data-text="Demand Planner" class="Demand">Demand Planner</span>
+                <span style="--i:3;" data-text="Purchasing Specialist" class="Purchasing">Purchasing Specialist</span>
+                <span style="--i:2;" data-text="Warehouse Keeper" class="Warehouse">Warehouse Keeper</span>
+                <span style="--i:1;" data-text="Sales Executive" class="Sales">Sales Executive</span>
+            </h2>
+            <p>
+                Over 10 years of experience in logistics, supply chain, and sales with a proven track record of success.<br>
+                Strong expertise in automation and technology integration to streamline workflows and enhance efficiency.<br>
+                Solid background in inventory management, demand planning, and S&OP processes.<br>
+            </p>
+            <div class="btn-sci">
+                <a href="../Pdf/My_CV.pdf" download target="_blank" class="btn">Download CV</a>
+                <div class="sci">
+                    <a href="https://github.com/lythanhdat21" target="_blank">
+                        <i class='bx bxl-github' ></i>
+                        <span class="tooltip">Github</span>
+                    </a>
+                    <a href="https://www.linkedin.com/feed/" target="_blank">
+                        <i class='bx bxl-linkedin' ></i>
+                        <span class="tooltip">Linkedin</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="home-img">
+            <div class="img-box">
+                <div class="img-item">
+                    <img src="../Images/Portrait.png">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services section -->
+    <section class="services"> <!--Delete active-->
+        <div class="services-img">
+            <div class="glowing-circle">
+                <span></span>
+                <span></span>
+                <div class="image">
+                    <img src="../Images/Portrait.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="services-content">
+            <h1>Services</h1>
+            <p>~ ~ ~ Please, ask anything about me ~ ~ ~</p>
+            <div class="chatbox">
+                <form id="chat-form">
+                    <input type="text" id="user-input" placeholder="Type your message here..." required>
+                    <button class="btn-services" type="submit">ASK</button>
+                </form>
+            </div>
+
+            <div id="bot-response" class="bot-response">
+                <!-- Hồi âm của bot sẽ hiển thị tại đây -->
+            </div>
+            
+            <!-- Liên kết đến file script.js -->
+            <script src="../static/script-apis.js"></script>
+        </div>
+    </section>
+
+    <!--Resume section -->
+    <section class="resume"> <!--Delete active-->
+        <div class="resume-container">
+            <div class="resume-box">
+                <h2>Why Hire Me?</h2>
+                <p class="desc">
+                    With over 10 years of experience in logistics, supply chain, and sales, 
+                    I bring proven expertise in automation, problem-solving, and operational 
+                    optimization. My ability to streamline workflows using AI tools has consistently 
+                    improved efficiency and reduced costs. I’m committed to driving results and 
+                    enhancing customer satisfaction, making me a strong asset for your team.
+                </p>
+                <button class="resume-btn experience active">Experience</button>
+                <button class="resume-btn education">Education</button>
+                <button class="resume-btn skill">Skill</button>
+                <button class="resume-btn about">About Me</button>
+            </div>
+
+            <div class="resume-box">
+                <div class="resume-detail experience active">
+                    <h2 class="heading">My <span>Experience</span></h2>
+                    <p class="experience desc">
+                        I have over 10 years of experience in logistics, supply chain, and sales. 
+                        I have integrated automation technology to reduce manual workloads by 50%, 
+                        effectively managed inventory, planned S&OP, and built strong customer relationships. 
+                        I am always seeking innovative solutions to optimize operations and enhance efficiency.
+                    </p>
+                    <div class="resume-list">
+                        <div class="resume-item">
+                            <p class="year SK">08/2025 - 06/2026</p>
+                            <h3 class="sales">Sales Excutive</h3>
+                            <p class="company">Song Kim Technology Co., Ltd.</p>
+                            <p class="SK">
+                                <span class="position">
+                                    <i class='bx bx-chevrons-right'></i>   
+                                    <span class="tele-text">Responsibilities:</span>          
+                                </span>
+                                <span class="tele-desc">
+                                    - Identified and developed potential customers through telesales activities.<br/>
+                                    - Contacted clients, arranged meetings, and provided consultation on automation and control solutions tailored to customer requirements.<br/>
+                                    - Collected project information, assessed customer needs, and prepared quotation plans.<br/>
+                                    - Conducted site surveys and coordinated with relevant stakeholders to evaluate actual installation and construction conditions.<br/>
+                                    - Monitored project progress and provided support throughout the implementation process.<br/>
+                                </span>
+                                <span class="position">
+                                    <i class='bx bx-chevrons-right'></i>
+                                    <span class="achiev-text">Key Achievements:</span>
+                                </span>
+                                <span class="achiev-desc">
+                                    - Acquired a solid understanding of electrical control panel wiring and operation procedures.<br/>
+                                    - Developed knowledge of lighting control systems and related electrical devices.<br/>
+                                    - Gained hands-on experience in surveying and implementing lighting systems at project sites.<br/>
+                                    - Enhanced technical consulting skills and experience working directly with customers on-site.<br/>
+                                </span>
+                            </p>
+                        </div>
+
+                        <div class="resume-item">
+                            <p class="year LK">04/2025 - 07/2025</p>
+                            <h3 class="sales">Sales Excutive</h3>
+                            <p class="company">Long Khang Technology Co., Ltd.</p>
+                            <p class="LK">
+                                <span class="position">
+                                    <i class='bx bx-chevrons-right'></i>   
+                                    <span class="tele-text">Responsibilities:</span>          
+                                </span>
+                                <span class="tele-desc">
+                                    - Generated new business opportunities through telesales and business development activities.<br/>
+                                    - Arranged meetings at the company office or LightHub showroom to introduce solutions and products.<br/>
+                                    - Collected project information, including 2D/3D drawings and related technical requirements.<br/>
+                                    - Collaborated with the Design and Costing departments to develop suitable solutions and commercial proposals.<br/>
+                                    - Worked closely with the Team Leader to present and consult on lighting and control solutions for clients.<br/>
+                                </span>
+                                <span class="position">
+                                    <i class='bx bx-chevrons-right'></i>
+                                    <span class="achiev-text">Key Achievements:</span>
+                                </span>
+                                <span class="achiev-desc">
+                                    - Gained a comprehensive understanding of business operations and project implementation processes in the lighting industry.<br/>
+                                    - Developed foundational knowledge of lighting technology, luminaire selection, and practical applications in construction projects.<br/>
+                                    - Became familiar with smart control systems such as Lutron and Crestron.<br/>
+                                    - Strengthened cross-functional collaboration and customer consultation skills.<br/>
+                                </span>
+                            </p>
+                        </div>
+
+                        <div class="resume-item">
+                            <p class="year a">05/2024 - 03/2025</p>
+                            <h3 class="sales">Sales Excutive</h3>
+                            <p class="company">CMPI LOGISTICS Co., Ltd.</p>
+                            <p class="CMPI">
+                                <span class="position">
+                                    <i class='bx bx-chevrons-right'></i>   
+                                    <span class="tele-text">Telesales Responsibilities:</span>          
+                                </span>
+                                <span class="tele-desc">
+                                    - Contact customers involved in importing activities to introduce services 
+                                    and establish strong business relationships.<br/>
+                                    - Regularly update the customer database and maintain accurate 
+                                    records of interactions.<br/>
+                                    - Prepare comprehensive reports to track telesales performance, including 
+                                    daily, weekly, and monthly summaries.<br/>
+                                    - Address customer inquiries, provide tailored solutions, and follow up on 
+                                    potential leads to convert them into loyal clients.<br/>
+                                </span>
+                                <span class="position">
+                                    <i class='bx bx-chevrons-right'></i>
+                                    <span class="achiev-text">Key Achievements:</span>
+                                </span>
+                                <span class="achiev-desc">
+                                    - Designed and implemented innovative automation tools to streamline processes, 
+                                    significantly reducing manual workload and saving time:<br/>
+                                    - - Automated Call Reports: Instantly generate detailed reports summarizing 
+                                    customer interactions after calls.<br/>
+                                    - - Automated Document Generation: Develop tools to create personalized 
+                                    introduction letters and quotations automatically.<br/>
+                                    - - Automated Communication Workflow: Simplified the process of sending 
+                                    professional documents (e.g., quotations and introduction letters) to customers 
+                                    with a single click.<br/>
+                                    - Increased efficiency in telesales operations by integrating technology 
+                                    and reducing processing time by over 50%.<br/>
+                                    - Enhanced customer engagement and satisfaction by delivering faster responses 
+                                    and more professional communication.
+                                </span>
+                            </p>
+                        </div>
+
+                        <div class="resume-item">
+                            <p class="year b">05/2022 - 08/2023</p>
+                            <h3 class="planner">General Planner</h3>
+                            <p class="company">DC Tech Co., Ltd.</p>
+                            <p class="DC-tech">
+                                <span class="position">
+                                    <i class='bx bx-chevrons-right'></i>
+                                    <span class="manage-text">Manage Inventory:</span>
+                                </span>
+                                <span class="manage-desc">
+                                    - Conduct daily stock checks to compare theoretical quantities with actual 
+                                    stock levels in the warehouse.<br/>
+                                    - Identify discrepancies and promptly report any differences to the relevant 
+                                    departments.<br/>
+                                    - Implement corrective actions to resolve inventory inconsistencies and ensure 
+                                    accurate stock records.<br/>
+                                </span>
+                                <span class="position">
+                                    <i class='bx bx-chevrons-right'></i>
+                                    <span class="sales-text">Sales in Distribution:</span>
+                                </span>
+                                <span class="sales-desc">
+                                    - Monitor item schedules and proactively notify Sales teams when items are 
+                                    approaching delivery or replenishment.<br/>
+                                    - Create detailed plans for handling multiple orders simultaneously, ensuring 
+                                    smooth operations and timely delivery.<br/>
+                                    - Coordinate with logistics and warehouse teams to manage delivery schedules 
+                                    and avoid delays.<br/>
+                                    - Provide real-time updates to Sales teams regarding order progress, stock 
+                                    availability, and potential issues.<br/>
+                                    - Collaborate with Sales and warehouse staff to streamline workflows, enhancing 
+                                    the efficiency of the distribution process.<br/>
+                                </span>
+                                <span class="position">
+                                    <i class='bx bx-chevrons-right'></i> 
+                                    <span class="achiev-text">Key Achievements:</span>
+                                </span>
+                                <span class="achiev-desc">
+                                    - Improved inventory accuracy by implementing a systematic approach to stock 
+                                    checks and reporting.<br/>
+                                    - Successfully optimized delivery schedules for high-priority orders, ensuring 
+                                    customer satisfaction and timely fulfillment.<br/>
+                                    - Strengthened collaboration between Sales and warehouse teams, resulting in 
+                                    improved operational efficiency and reduced errors.
+                                </span>
+                            </p>
+                        </div>
+
+                        <div class="resume-item">
+                            <p class="year c">10/2018 - 02/2021</p>
+                            <h3 class="outsourcing">Outsourcing, Demand Planner, Supply Planner</h3>
+                            <p class="company">Phu Khang Phat Co., Ltd.</p>
+                            <p class="PKP">
+                                <span class="position">
+                                    <i class='bx bx-chevrons-right'></i>
+                                    <span class="outsourcing-text">Outsourcing</span>
+                                </span>
+                                <span class="outsourcing-desc">
+                                    (10/2018 - 08/2019):<br/>
+                                    - Obtain quotations from customers.<br/>
+                                    - Plan sourcing from both internal and external suppliers.<br/>
+                                    - Source materials from external suppliers if internal sources can't meet customer needs.<br/>
+                                    - Compare payment terms, lead times, and delivery conditions among vendors.<br/>
+                                    - Approve purchases through contracts, invoices, packing lists, B/Ls etc.<br/>
+                                    - Track, monitor, and update order schedules.<br/>
+                                    - Notify relevant departments when an order is approaching.<br/>
+                                    - Evaluate supplier performance using KPIs.<br/>  
+                                </span>                            
+                                <span class="position">
+                                    <i class='bx bx-chevrons-right'></i>
+                                    <span class="DP-text">Demand and Supply Planner</span>
+                                </span>
+                                <span class="DP-desc">
+                                    (09/2019 - 02/2021):<br/>
+                                    - Update weekly, monthly, and quarterly sales and safety stock reports.<br/>
+                                    - Analyze and clean historical data and marketing plans for forecasting.<br/>
+                                    - Create demand forecasts using techniques such as Moving Average and Exponential Smoothing, 
+                                    and work with Sales and - Marketing teams to align forecast numbers.<br/>
+                                    - Organize S&OP meetings with Sales, Marketing, and Operations to review supply scenarios.<br/>
+                                    - Prepare functional plans for Sales & Marketing, Operations, and Supply after approval from the Director.<br/>
+                                    - Upload the consensus S&OP forecast to the Google Drive system.<br/>
+                                    - Plan material procurement for timber based on BOM (Bill of Materials).<br/>
+                                    - Work with Sales, Marketing, and Operations to maintain safety stock levels and resolve stock issues.                              
+                                </span>
+                            </p>
+                        </div>
+                        <div class="resume-item">
+                            <p class="year d">10/2016 - 09/2018</p>
+                            <h3 class="warehousing">Warehouse Manager, Import/Export Executive & Outsourcing</h3>
+                            <p class="company">APP TIMBER Co., Ltd.</p>
+                            <p class="APP">
+                                <span class="position">
+                                    <i class='bx bx-chevrons-right'></i>
+                                    <span class="warehouse-text">Warehouse Manager</span>
+                                </span>
+                                <span class="warehouse-desc">
+                                    (10/2016 - 05/2017):<br/>
+                                    - Managed inbound and outbound timber operations.<br/>
+                                    - Inspected the quantity and quality of timber.<br/>
+                                    - Applied protective chemicals to prevent insect damage.<br/>
+                                    - Organized timber storage for easier access.<br/>
+                                    - Ensured the warehouse was the cleanest and most customer-friendly location, often hosting customer visits.<br/>
+                                    - Prepared monthly timber reports.<br/>
+                                </span>
+                                <span class="position">
+                                    <i class='bx bx-chevrons-right'></i>
+                                    <span class="ExIm-text">Export and Import Executive</span>
+                                </span>
+                                <span class="ExIm-desc">
+                                    (04/2017 - 09/2018):<br/>
+                                    - Checked and prepared import documents from suppliers.<br/>
+                                    - Informed customers when containers would arrive at the warehouse.<br/>
+                                    - Prepared all documents for unloading containers.<br/>
+                                    - Resolved issues with damaged containers or incorrect timber deliveries.<br/>
+                                    - Addressed debit notes with forwarding companies.<br/>
+                                    - Reported to the director once all tasks were completed.<br/>
+                                </span>
+                                <span class="position">
+                                    <i class='bx bx-chevrons-right'></i>
+                                    <span class="research-text">Research Sourcing</span>
+                                </span>
+                                <span class="research-desc">
+                                    (11/2017 - 09/2018):<br/>
+                                    - Researched sourcing based on director inquiries.<br/>
+                                    - Visited warehouse suppliers to expand knowledge.<br/>
+                                    - Checked the quantity and quality of items before loading into containers.<br/>
+                                    - Informed the director when all tasks were completed.  
+                                </span>                                                       
+                            </p>
+                        </div>
+
+                        <div class="resume-item">
+                            <p class="year e">07/2015 - 09/2016</p>
+                            <h3 class="importExport">Import/Export Executive, Warehouse Supervisor</h3>
+                            <p class="company">Phu Tho Wholesale Co., Ltd.</p>
+                            <p class="phutho">
+                                <span class="position">
+                                    <i class='bx bx-chevrons-right'></i>
+                                    <span class="ImEx-text">Import/Export Executive:</span>
+                                </span>
+                                <span class="ImEx-desc">
+                                    - Checked and processed import documents.<br/>
+                                    - Opened customs declaration forms.<br/>
+                                    - Collected Delivery Orders (D/O) for specific shipments.<br/>
+                                    - Paid premiums for containers at the shipping line.<br/>
+                                    - Managed importation from Cat Lai port to the warehouse and exportation to domestic companies.<br/>
+                                </span>
+                                <span class="position">
+                                    <i class='bx bx-chevrons-right'></i>
+                                    <span class="warehouse-text">Warehouse Supervisor:</span>
+                                </span>
+                                <span class="warehouse-desc">
+                                    - Addressed issues related to wooden bundles.<br/>
+                                    - Selected and arranged goods for customer sales.<br/>
+                                </span>
+                            </p>
+                        </div>
+
+                        <div class="resume-item">
+                            <p class="year f">03/2014 - 06/2015</p>
+                            <h3 class="customs">Customs Clearance Staff & Sales Logistics</h3>
+                            <p class="company">Thanh Long Co., Ltd.</p>
+                            <p class="TL">
+                                <span class="position">
+                                    <i class='bx bx-chevrons-right'></i>
+                                    <span class="customs-text">Customs Clearance Staff</span>
+                                </span>
+                                <span class="customs-desc">
+                                    (03/2014 - 12/2014):<br/>
+                                    - Collected documents from importers.<br/>
+                                    - Opened customs declaration forms.<br/>
+                                    - Worked with customs to release cargo from ports, such as Cat Lai.<br/>
+                                </span>
+                                <span class="position">
+                                    <i class='bx bx-chevrons-right'></i>
+                                    <span class="sales-text">Sales Logistics</span>
+                                </span>
+                                <span class="sales-desc">
+                                    (01/2015 - 06/2015):<br/>
+                                    - Sought out customers.<br/>
+                                    - Prepared price quotations.<br/>
+                                    - Persuaded customers to continue using the company's services and resolved customer issues.<br/>                              
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="resume-detail education">
+                    <h2 class="heading">My <span>Education</span></h2>
+                    <p class="education desc">
+                        I possess a strong educational background in business administration, international trade, 
+                        and supply chain management. I have gained in-depth knowledge and practical 
+                        skills in logistics, financial analysis, warehouse operations, and demand planning. Additionally, 
+                        my education has equipped me with a comprehensive understanding of import/export procedures and global trade. 
+                    </p>
+
+                    <div class="resume-list">
+                        <div class="resume-item">
+                            <p class="year j">01/2025</p>
+                            <h3 class="GPT-4">Build AI Apps with ChatGPT, Dall-E, and GPT-4</h3>
+                            <p class="company">Coursera</p>
+                            <p class="GPT-4 desc">
+                                - The basic concept of AI Engineering.<br/>
+                                - How to deploy your AI apps on the web.<br/>
+                                - How to build apps with the OpenAI API.<br/>
+                            </p>
+                        </div>
+
+                        <div class="resume-item">
+                            <p class="year a">12/2020</p>
+                            <h3 class="E-commerce">E-commerce in Supply Chain Management</h3>
+                            <p class="company">Vietnam Logistics & Aviation School</p>
+                            <p class="E-commerce desc">
+                                - Understanding the role of E-commerce in supply chain management.<br/>
+                                - Managing integrated e-commerce systems.<br/>
+                                - Inventory management strategies in the online environment.<br/>
+                            </p>
+                        </div>
+
+                        <div class="resume-item">
+                            <p class="year b">11/2020</p>
+                            <h3 class="Finance">Finance Management</h3>
+                            <p class="company">Vietnam Logistics & Aviation School</p>
+                            <p class="Finance desc">
+                                - Gained comprehensive knowledge of Finance for Small and Medium-Sized Enterprises (SMEs).<br/>
+                                - Developed skills in Foreign Currency Risk Management to navigate exchange rate fluctuations effectively.<br/>
+                                - Acquired expertise in Cost Management to enhance operational efficiency.<br/>
+                                - Mastered techniques for Supply Chain Measurement to evaluate and optimize performance.<br/>
+                                - Enhanced abilities in Financial Analysis to support strategic decision-making.<br/>
+                            </p>
+                        </div>
+
+                        <div class="resume-item">
+                            <p class="year c">10/2020</p>
+                            <h3 class="Product">Production & Operation Management</h3>
+                            <p class="company">Vietnam Logistics & Aviation School</p>
+                            <p class="Product desc">
+                                Gained in-depth knowledge of ERP processes, Lean solutions, Six Sigma methodologies, 
+                                and the Theory of Constraints.
+                            </p>
+                        </div>
+
+                        <div class="resume-item">
+                            <p class="year d">09/2020</p>
+                            <h3 class="warehouse">Warehouse & Distribution Management</h3>
+                            <p class="company">Vietnam Logistics & Aviation School</p>
+                            <p class="warehouse desc">
+                                Developed expertise in warehouse layout planning and management.<br/>
+                                Studied various racking systems, including:<br/>
+                                - Single Pallet Rack.<br/>
+                                - Double-Deep Pallet Rack.<br/>
+                                - Learned input and output processes for warehouse operations.<br/>
+                            </p>
+                        </div>
+
+                        <div class="resume-item">
+                            <p class="year e">08/2020</p>
+                            <h3 class="International">International Transport Management</h3>
+                            <p class="company">Vietnam Logistics & Aviation School</p>
+                            <p class="International desc">
+                                Understanding cost management, distribution & domestics delivery method, 
+                                logistics services providers and Outsourcing.
+                            </p>
+                        </div>
+
+                        <div class="resume-item">
+                            <p class="year f">07/2020</p>
+                            <h3 class="Demand">Demand Planning</h3>
+                            <p class="company">Vietnam Logistics & Aviation School</p>
+                            <p class="Demand desc">
+                                Acquired skills in demand forecasting using techniques such as MRP (Material Requirements Planning)
+                                and S&OP (Sales and Operations Planning) processes.
+                            </p>
+                        </div>
+
+                        <div class="resume-item">
+                            <p class="year g">06/2020</p>
+                            <h3 class="Foundation">Foundation of Supply Chain Management</h3>
+                            <p class="company">Vietnam Logistics & Aviation School</p>
+                            <p class="Foundation desc">
+                                Understanding the concepts & Application, Operations, Strategies & Performance, 
+                                and risk Management in Supply Chain
+                            </p>
+                        </div>
+
+                        <div class="resume-item">
+                            <p class="year h">08/2014</p>
+                            <h3 class="Bachelor">Bachelor of Business Administration</h3>
+                            <p class="company">The Hochiminh Opening University</p>
+                            <p class="Bachelor desc">
+                                Built a strong foundation in business operations, including supply and demand analysis across various goods sectors.
+                            </p>
+                        </div>
+
+                        <div class="resume-item">
+                            <p class="year i">08/2012</p>
+                            <h3 class="Business">The International Business Studies</h3>                               
+                            <p class="company">The college of Finance and Customs</p>
+                            <p class="Business desc">
+                                - Gained comprehensive knowledge of import/export procedures and related documentation.<br/>
+                                - Acquired an understanding of international trade.<br/>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resume-detail skills">
+                    <h2 class="heading">My <span>Skills</span></h2>
+                    <p class="skills desc">
+                        I have a diverse skill set spanning management, leadership, and strategic planning, combined with 
+                        expertise in customer service and project management. Proficient in Microsoft Office and 
+                        telecommunications, I also bring experience in AI-driven workplace automation, showcasing my 
+                        ability to adapt to modern technological advancements.
+                    </p>
+
+                    <div class="resume-list">
+                        <div class="resume-item">
+                            <i class='bx bxs-brain' ></i>
+                            <span class="AI">AI - Workplace Automation</span>
+                        </div>
+                        <div class="resume-item">
+                            <i class='bx bxl-python'></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="resume-item">
+                            <i class='bx bxl-javascript' ></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="resume-item">
+                            <i class='bx bx-data'></i>
+                            <span>MySQL</span>
+                        </div>
+                        <div class="resume-item">
+                            <i class='bx bxl-docker' ></i>
+                            <span>Docker</span>
+                        </div>
+                        <div class="resume-item">
+                            <i class='bx bxs-file-html' ></i>
+                            <span>HTML</span>
+                        </div>
+                        <div class="resume-item">
+                            <i class='bx bxs-file-css' ></i>
+                            <span>CSS</span>
+                        </div>
+                        <div class="resume-item">
+                            <i class='bx bx-message-rounded-dots'></i>
+                            <span class="customer">Customer Service</span>
+                        </div>
+                        <div class="resume-item">
+                            <i class='bx bxl-microsoft-teams' ></i>
+                            <span>Microsoft Office</span>
+                        </div>
+                        <div class="resume-item">
+                            <i class='bx bxs-file-doc' ></i>
+                            <span class="project">Project Management</span>
+                        </div>
+                        <div class="resume-item">
+                            <i class='bx bx-line-chart' ></i>
+                            <span class="strategic">Strategic Planning</span>
+                        </div>
+                        <div class="resume-item">
+                            <i class='bx bxs-microphone' ></i>
+                            <span class="telecomunications">Telecommunications</span>
+                        </div>
+                        <div class="resume-item">
+                            <i class='bx bx-child' ></i>
+                            <span class="leadership">Leadership</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resume-detail about">
+                    <h2 class="heading">About <span>Me</span></h2>
+                    <p class="desc">
+                        This is my information described briefly below. Hopefully, 
+                        you can consider me for suitable opportunities or collaborations.
+                    </p>
+                    <div class="resume-list">
+                        <div class="resume-item name">
+                            <p>Name <span>Tony Lee</span></p>
+                        </div>
+                        <div class="resume-item gender">
+                            <p>Gender <span>Male</span></p>
+                        </div>
+                        <div class="resume-item age">
+                            <p>Age <span>35 Years Old</span></p>
+                        </div>
+                        <div class="resume-item status">
+                            <p>Status <span>Single</span></p>
+                        </div>
+                        <div class="resume-item city">
+                            <p>City <span>Saigon</span></p>
+                        </div>
+                        <div class="resume-item nationality">
+                            <p>Nationality <span>Vietnam</span></p>
+                        </div>
+                        <div class="resume-item experience">
+                            <p>Experience <span>+10 Years</span></p>
+                        </div>
+                        <div class="resume-item full-time">
+                            <p>Full Time <span>Available</span></p>
+                        </div>
+                        <div class="resume-item freelance">
+                            <p>Freelance <span>Available</span></p>
+                        </div>
+                        <div class="resume-item phone">
+                            <p>Phone <span>+84 777 995 100</span></p>
+                        </div>
+                        <div class="resume-item email">
+                            <p>Email <span>tonylee003004@gmail.com</span></p>
+                        </div>
+                        <div class="resume-item languages">
+                            <p>Languages <span>English, Vietnamese</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio section -->
+    <section class="portfolio"> <!--Delete active-->
+        <h2 class="heading-project">Lastest <span>Projects</span></h2>
+        <div class="portfolio-container">
+            <div class="portfolio-box">
+                <div class="portfolio-detail active">
+                    <p class="numb">01</p>
+                    <h3 class="automation_1">Automated Call Reports</h3>
+                    <p class="automation_1_desc">
+                        Instantly generate detailed reports 
+                        summarizing customer interactions after calls
+                    </p>
+                    <div class="tech">
+                        <p>PYTHON, MYSQL, ZALO, EXCEL </p>
+                    </div>
+                    <div class="live-github">
+                        <i class="bx bx-arrow-back"></i><span class="live_1">Live Project</span>
+                    </div>
+                </div>
+
+                <div class="portfolio-detail">
+                    <p class="numb">02</p>
+                    <h3 class="automation_2">Automated Document Generation</h3>
+                    <p class="automation_2_desc">
+                        Develop tools to create personalized introduction 
+                        letters and quotations automatically
+                    </p>
+                    <div class="tech">
+                        <p>PYTHON, MYSQL, OUTLOOK, EXCEL, PDF</p>
+                    </div>
+                    <div class="live-github">
+                        <i class="bx bx-arrow-back"></i><span class="live_2">Live Project</span>
+                    </div>
+                </div>
+
+                <div class="portfolio-detail">
+                    <p class="numb">03</p>
+                    <h3 class="automation_3">Automated Communication Workflow</h3>
+                    <p class="automation_3_desc">
+                        Simplified the process of sending professional documents 
+                        (e.g., quotations and introduction letters) to customers 
+                        with a single click.
+                    </p>
+                    <div class="tech">
+                        <p>PYTHON, MYSQL, EXCEL, WORD, PDF, OUTLOOK</p>
+                    </div>
+                    <div class="live-github">
+                        <i class="bx bx-arrow-back"></i><span class="live_3">Live Project</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <!-- images carousel -->
+                <div class="portfolio-carousel">
+                    <div class="img-slide">
+                        <div class="img-item">
+                            <img src="../Images/1.png">
+                        </div>
+                        <div class="img-item">
+                            <img src="../Images/2.png">
+                        </div>
+                        <div class="img-item">
+                            <img src="../Images/3.png">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="navigation">
+                    <button class="arrow-left disabled"><i class='bx bxs-chevron-left'></i></button>
+                    <button class="arrow-right"><i class='bx bxs-chevron-right'></i></button>
+                </div>
+            </div>           
+        </div>
+    </section>
+
+    <!-- Contact section -->
+    <section class="contact"> <!--Delete active-->
+        <div class="contact-container">
+            <div class="contact-box">
+                <h2>Let's Work Together</h2>
+                <p class="desc">
+                    Don't hesitate to contact me if you find anything of mine that might help you.
+                </p>
+                <div class="contact-detail">
+                    <i class='bx bxl-whatsapp'></i>
+                    <div class="detail">
+                        <p>Whatsapp</p>
+                        <p>(+84) 777 995 100</p>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <i class='bx bxs-phone'></i>
+                    <div class="detail">
+                        <p>Viber</p>
+                        <p>(+84) 777 995 100</p>
+                    </div>
+                </div>
+                <div class="contact-detail">
+                    <i class='bx bxl-skype' ></i>
+                    <div class="detail">
+                        <p>Skype</p>
+                        <p>tonylee003004@gmail.com</p>
+                    </div>
+                </div>
+                <div class="contact-detail two">
+                    <i class="bx bx-envelope"></i>
+                    <div class="detail">
+                        <p class="email">Email</p>
+                        <p>tonylee003004@gmail.com</p>
+                    </div>
+                </div>
+                <div class="contact-detail three">
+                    <i class="bx bxs-map"></i>
+                    <div class="detail">
+                        <p class="address">Address</p>
+                        <p class="any_address">Any address</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-box box">
+                <form action="https://getform.io/f/ayvplgdb" method="POST">
+                    <h2 class="heading-contact">Contact <span>Me!</span></h2>
+                    <div class="field-box">
+                        <input type="text" name="full_name" placeholder="Full Name" required>
+                        <input type="email" name="email" placeholder="Email Address" required>
+                        <input type="text" name='phone' placeholder="Phone number" required>
+                        <input type="text" name='subject' placeholder="Email Subject" required>
+                        <textarea name="message" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom js -->
+    <script src="../static/script.js"></script>
+    
+</body>
+</html>
+
